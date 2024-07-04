@@ -1,0 +1,29 @@
+@keyframes nube {
+    100% { left:100vw }
+
+}
+body{
+    background-repeat: no-repeat;
+    background-image: url(./img/sky.jpg);
+    background-size: 100%;
+    overflow: hidden;
+}
+.nube1{
+    position: absolute;
+    left: -13vw;
+    animation-name: nube;
+    animation-duration: 15s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.nube2{
+    position: absolute;
+    top: 20vw;
+    left: -13vw;
+    animation-name: nube;
+    animation-duration: 22s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
