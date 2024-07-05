@@ -1,0 +1,74 @@
+
+@font-face{
+    font-family: letra;
+    src: url(./font/Utsaah\ Regular.ttf);
+}
+body{
+    background-color: rgb(255, 228, 196);
+    justify-content: center;
+    display: flex;
+    font-family: letra;
+}
+.cuadro{
+    position: absolute;
+    background-color: white;
+    top: 6vw;
+    width: 35vw;
+    height: 20vw;
+    animation-name: saltar;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+}
+@keyframes saltar {
+    0% {
+        transform: translateY(400px);
+    }
+}
+.img{
+    position: absolute;
+    top: -3vw;
+    width: 7vw;
+    height: 7vw;
+    left: 14vw;
+    background-color: white;
+    border-radius: 4.5vw;
+    box-shadow: 2px 2px 8px 0 rgb(211, 211, 211), 4px 4px 16px 0 rgb(211, 211, 211), 0px 0px 24px 2px rgb(181, 181, 181);
+}
+.l1{
+    position: absolute;
+    top: 2vw;
+    left: 3vw;
+    color: red;
+    font-size: 3vw;
+    font-weight:400;
+}
+.l2{
+    position: absolute;
+    top: 7vw;
+    left: 7.5vw;
+    text-align: center;
+    font-size: 1.4vw;
+}
+.l3{
+    position: absolute;
+    top: 13vw;
+    background-color: #009db4;
+    width: 15vw;
+    height: 2.5vw;
+    left: 9.5vw;
+    justify-content: center;
+    display: flex;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    
+}
+.l3-1{
+    position: absolute;
+    font-size: 1.4vw;
+    top: -0.9vw;
+}
+.l3:hover{
+    background-color: red;
+}
+
