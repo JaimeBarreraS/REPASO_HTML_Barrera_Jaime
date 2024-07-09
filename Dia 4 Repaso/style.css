@@ -1,0 +1,99 @@
+@keyframes netflix {
+    0% {
+        height: 0;
+        margin-top: 13vw;
+    };
+    33% {
+        height: 15vw;
+        margin-top: 0;
+    }
+    100%{visibility: visible;}
+}
+@keyframes diagonal {
+    0% {
+        height: 0;
+        margin-left: -2.9vw;
+    };
+    33% {
+        height: -2.9vw;
+        margin-left: 0;
+    }
+    100%{visibility: visible;}
+}
+@keyframes netflix2 {
+    0% {
+        height: 0;
+        margin-top: 15vw;
+    };
+    33% {
+        height:  15vw;
+        margin-top: 0;
+    }
+    100%{visibility: visible;}
+}
+
+
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+}
+.contenedor{
+    background: black;
+    top:18vw;
+    width: 12vw;
+    height: 13vw;
+    position: absolute;
+    overflow: hidden;
+}
+.linea1{
+    background: red;
+    height: 13vw;
+    width: 2.6vw;
+    position: absolute;
+    animation-name: netflix;
+    animation-duration: 2s ;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+.diagonal{
+    background: red;
+    height: 16vw;
+    width: 2.6vw;
+    position: absolute;
+    rotate: -23deg;
+    left: 2.9vw;
+    top:-1.5vw;
+    box-shadow: -27px -16px 35px -7px rgba(0,0,0,0.78);
+    animation-name: diagonal;
+    animation-duration: 1.8s ;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+
+}
+.linea2{
+    background: red;
+    height: 13vw;
+    width: 2.6vw;
+    position: absolute;
+    left: 5.65vw;
+    animation-name: netflix2;
+    animation-duration: 2s ;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.borde{
+    background: black;
+    top:30.3vw;
+    width: 12vw;
+    height: 2vw;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    left: 42vw;
+}
