@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f8f8;
+}
+.safari {
+    position: relative;
+    width: 26vw;
+    height: 26vw;
+    background: #f2f2f2;
+    border-radius: 3.2vw;
+    box-shadow: 
+    0 30px 20px #ccc,
+    0 30px 0 0 rgba(0,0,0,0.5),
+    0 50px 30px rgba(0,0,0,0.3);
+}
+.hora-minutos {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 2.2vw;
+    background: linear-gradient(#1ec9ff, #2971e7);
+    border-radius: 50%;
+    box-shadow: 0 -5px 0 5px rgba(0,0,0,0);
+}
+.hora-minutos span {
+    position: absolute;
+    width: 1.8px;
+    height: 24px;
+    left: 10.7vw;
+    background: #f2f2f2;
+    transform: translateY(-9.3vw) rotate(calc(var(--i) * 12deg));
+    transform-origin: 1px 10vw;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.392));
+}
+.hora-minutos span::before {
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 12px;
+    background: #f2f2f2;
+    transform-origin: 0 150px;
+    transform: rotate(6deg);
+}
+.aguja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 36px;
+    inset: 50px;
+    transform: translateX(130px) rotate(calc(var(--rotation) * 1deg));
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+    transition: transform 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.safari:hover .aguja {
+    transform: rotate(360deg);
+}
+.aguja::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    height: 150px;
+    left: 8.5vw;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 150px solid rgb(231, 76, 60);
+}
+.aguja::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    height: 150px;
+    left: 8.5vw;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 150px solid rgb(255, 255, 255);
+}
