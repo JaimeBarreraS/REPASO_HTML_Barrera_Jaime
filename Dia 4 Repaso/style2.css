@@ -32,12 +32,13 @@ body {
     box-shadow: 0 -5px 0 5px rgba(0,0,0,0);
 }
 .hora-minutos span {
+    top: 0.8vw;
     position: absolute;
     width: 1.8px;
     height: 24px;
     left: 10.7vw;
     background: #f2f2f2;
-    transform: translateY(-9.3vw) rotate(calc(var(--i) * 12deg));
+    transform: rotate(calc(var(--i) * 12deg));
     transform-origin: 1px 10vw;
     filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.392));
 }
@@ -57,30 +58,29 @@ body {
     position: absolute;
     width: 36px;
     inset: 50px;
-    transform: translateX(130px) rotate(calc(var(--rotation) * 1deg));
+    left: 45%;
+    transform: rotate(60deg);
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
-    transition: transform 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .safari:hover .aguja {
-    transform: rotate(360deg);
+    transform: rotate(420deg); 
 }
 .aguja::before {
     content: "";
     position: absolute;
-    top: -150px;
-    height: 150px;
-    left: 8.5vw;
+    top: 0px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-bottom: 150px solid rgb(231, 76, 60);
 }
 .aguja::after {
-    content: "";
+    content: '';
     position: absolute;
-    top: 0px;
+    top: 149.5px;
     height: 150px;
-    left: 8.5vw;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
-    border-bottom: 150px solid rgb(255, 255, 255);
+    border-top: 150px solid rgb(255, 255, 255);
+
 }
